@@ -10,7 +10,7 @@ function solution(arr1, arr2) {
         else answer.push(arr1[p1++])
     }
     
-    while(p1<n1){
+    while(p1<n1){ㅈ
         answer.push(arr1[p1++])
     }
     while(p2<n2){

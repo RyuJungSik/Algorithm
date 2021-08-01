@@ -26,5 +26,5 @@ function solution(size, arr) {
     return answer.reverse();
 }
 
-let arr = [1, 2, 3, 2, 6, 2, 3, 5, 7];
+let arr = [1, 2, 3, 2, 6, 2, 3, 5, 7, 9, 10, 11, 12, 13];
 console.log(solution(5, arr));

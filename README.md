@@ -176,5 +176,4 @@
 # 3. 이론
 
 1. [코딩 테스트란?](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/01%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%9E%80.md)
-
 2. [구현이란?](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/01%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%9E%80.md)

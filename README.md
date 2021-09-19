@@ -13,8 +13,9 @@
 # 2.프로그래머스
 
 ## 푼 문제
-
-- Level 1
+<details>
+<summary> Level 1(Click!)</summary>
+ <div markdown="1">  
 
     ****[로또의 최고 순위와 최저 순위2021 Dev-Matching: 웹 백엔드 개발자(상반기)**** 
     **9139명 완료**](https://programmers.co.kr/learn/courses/30/lessons/77484)
@@ -147,8 +148,11 @@
 
     ****[직사각형 별찍기연습문제**** 
     **19837명 완료**](https://programmers.co.kr/learn/courses/30/lessons/12969)
-
-- Level 2
+</div>
+</details>
+<details>
+<summary> Level 2(Click!)</summary>
+ <div markdown="1">  
 
     ****[문자열 압축2020 KAKAO BLIND RECRUITMENT** 
     **14640명 완료**](https://programmers.co.kr/learn/courses/30/lessons/60057)
@@ -170,11 +174,12 @@
 
     ****[괄호 변환2020 KAKAO BLIND RECRUITMENT** 
     **9899명 완료**](https://programmers.co.kr/learn/courses/30/lessons/60058)
+</div>
+</details>
 
 ## 다시 풀 문제
 
 # 3. 이론
 
 1. [코딩 테스트란?](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/01%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%9E%80.md)
-
 2. [구현이란?](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/01%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%9E%80.md)

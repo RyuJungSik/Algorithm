@@ -1,6 +1,7 @@
 # 알고리즘
 
 # 1. 백준
+[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=xvbc)](https://solved.ac/xvbc)
 
 ## 푼 문제
 

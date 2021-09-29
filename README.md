@@ -188,3 +188,4 @@
 3. [예외처리, 방향벡터, 탐색](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/03%20%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC%2C%EB%B0%A9%ED%96%A5%EB%B2%A1%ED%84%B0%2C%ED%83%90%EC%83%89.md)
 4. [DP](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/04%20%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95%EC%9D%B4%EB%9E%80.md)
 5. [수학 알고리즘](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/05%20%EC%88%98%ED%95%99.md)
+6. [브루투포스](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/06%20%EB%B8%8C%EB%A3%A8%ED%8A%B8%ED%8F%AC%EC%8A%A4.md)

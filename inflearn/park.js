@@ -1,22 +1,38 @@
-function solution(arr,money){  
-    let answer=0;
-    let p1=0
-    let p2=0
-    let sum=0
-    let n=arr.length
-    while (p1<n){
-        if (answer<=p1-p2+1 && sum<=money){
-            answer=p1-p2
+const isPrime=(num)=>{
+    let flag=true
+    for(let i=2;i< parseInt(Math.sqrt(num))+1;i++){
+        if (num%i===0){
+            flag=false
+            return false
         }
-        if (sum>money){
-            sum-=arr[p2]
-            p2++
-            continue
-        }
-        sum+=arr[p1]
-        p1++
     }
-
+    return flag
+}
+function solution(s){  
+    let answer=0
+    let n=s.length
+    let numarr=[]
+    let tmp=""
+    for (let i of s){
+        if(!isNaN(i)===true){
+            tmp+=i
+        }else{
+            if (tmp!=""){
+             numarr.push(tmp)
+            }
+            
+            tmp=""
+        }
+    }
+    if(!isNaN(s[n-1])===true){
+        numarr.push(tmp)
+    }
+    console.log(numarr)
+    for(let i of numarr){
+        if(isPrime(i)===true){
+            answer+=1
+        }
+    }
     return answer;
   }
-  console.log(solution([245,317,151,192],100));
+  console.log(solution("ab23cd21of11"));

@@ -10,14 +10,16 @@
 
 ## 다시 풀 문제
 
-11650 1248 5719 10989 17425 2225 2156 13398 2133 16197 2580 4574
+- 11650 1248 5719 10989 17425 2225 2156 13398 2133 16197 2580 4574
+- 멀쩡한 사각형, 수식 최대화
 
 # 2.프로그래머스
 
 ## 푼 문제
+
 <details>
 <summary> Level 1(Click!)</summary>
- <div markdown="1">  
+ <div markdown="1">
 
     [로또의 최고 순위와 최저 순위2021 Dev-Matching: 웹 백엔드 개발자(상반기) 
     **9139명 완료**](https://programmers.co.kr/learn/courses/30/lessons/77484)
@@ -150,11 +152,12 @@
 
     [직사각형 별찍기연습문제 
     **19837명 완료**](https://programmers.co.kr/learn/courses/30/lessons/12969)
+
 </div>
 </details>
 <details>
 <summary> Level 2(Click!)</summary>
- <div markdown="1">  
+ <div markdown="1">
 
     [문자열 압축2020 KAKAO BLIND RECRUITMENT** 
     **14640명 완료**](https://programmers.co.kr/learn/courses/30/lessons/60057)
@@ -176,6 +179,7 @@
 
     [괄호 변환2020 KAKAO BLIND RECRUITMENT** 
     **9899명 완료**](https://programmers.co.kr/learn/courses/30/lessons/60058)
+
 </div>
 </details>
 

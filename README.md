@@ -191,5 +191,7 @@
 4. [DP](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/04%20%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95%EC%9D%B4%EB%9E%80.md)
 5. [수학 알고리즘](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/05%20%EC%88%98%ED%95%99.md)
 6. [브루투포스](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/06%20%EB%B8%8C%EB%A3%A8%ED%8A%B8%ED%8F%AC%EC%8A%A4.md)
+7. [정규표현식](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D.md)
 
 # 4. 배운 것
+1. [정규표현식에서 변수 사용](https://github.com/RyuJungSik/Algorithm/blob/master/%EB%B0%B0%EC%9A%B4%EA%B2%83/%EC%A0%95%EA%B7%9C%EC%8B%9D%EB%B3%80%EC%88%98%EC%82%AC%EC%9A%A9.md)

@@ -183,8 +183,6 @@
 </div>
 </details>
 
-## 다시 풀 문제
-
 # 3. 이론
 
 1. [코딩 테스트란?](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/01%20%EC%BD%94%EB%94%A9%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%9E%80.md)
@@ -193,3 +191,5 @@
 4. [DP](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/04%20%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95%EC%9D%B4%EB%9E%80.md)
 5. [수학 알고리즘](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/05%20%EC%88%98%ED%95%99.md)
 6. [브루투포스](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/06%20%EB%B8%8C%EB%A3%A8%ED%8A%B8%ED%8F%AC%EC%8A%A4.md)
+
+# 4. 배운 것

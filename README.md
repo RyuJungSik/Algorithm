@@ -10,7 +10,7 @@
 
 ## 다시 풀 문제
 
-- 11650 1248 5719 10989 17425 2225 2156 13398 2133 16197 2580 4574
+- 11650 1248 5719 10989 17425 2225 2156 13398 2133 16197 2580 4574 12946
 - 멀쩡한 사각형, 수식 최대화
 
 # 2.프로그래머스
@@ -194,4 +194,5 @@
 7. [정규표현식](https://github.com/RyuJungSik/Algorithm/blob/master/%EC%9D%B4%EB%A1%A0/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D.md)
 
 # 4. 배운 것
+
 1. [정규표현식에서 변수 사용](https://github.com/RyuJungSik/Algorithm/blob/master/%EB%B0%B0%EC%9A%B4%EA%B2%83/%EC%A0%95%EA%B7%9C%EC%8B%9D%EB%B3%80%EC%88%98%EC%82%AC%EC%9A%A9.md)

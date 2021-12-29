@@ -196,3 +196,4 @@
 # 4. 배운 것
 
 1. [정규표현식에서 변수 사용](https://github.com/RyuJungSik/Algorithm/blob/master/%EB%B0%B0%EC%9A%B4%EA%B2%83/%EC%A0%95%EA%B7%9C%EC%8B%9D%EB%B3%80%EC%88%98%EC%82%AC%EC%9A%A9.md)
+2. [육각 보드 색](https://github.com/RyuJungSik/Algorithm/blob/master/%EB%B0%B0%EC%9A%B4%EA%B2%83/%EC%9C%A1%EA%B0%81%20%EB%B3%B4%EB%93%9C%20%EC%83%89.md)

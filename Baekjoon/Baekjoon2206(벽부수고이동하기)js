@@ -1,53 +1,44 @@
 const solution = (input) => {
   const [N, M] = input.shift().split(" ").map(Number);
-  const board = Array.from({ length: N }, (_, idx) =>
+  const a = Array.from({ length: N }, (_, idx) =>
     input[idx].split("").map(Number)
   );
-  const brick = [];
-  let visited = [];
-  let answer = N * M + 1;
   const [dx, dy] = [
     [1, -1, 0, 0],
     [0, 0, 1, -1],
   ];
+  const dist = Array.from({ length: N }, () =>
+    Array.from({ length: M }, () => new Array(2).fill(0))
+  );
+  const q = [];
+  q.push([0, 0, 0]);
+  dist[0][0][0] = 1;
 
-  for (let i = 0; i < N; i++) {
-    for (let j = 0; j < M; j++) {
-      if (board[i][j] === 1) brick.push([i, j]);
-    }
-  }
-
-  const bfs = () => {
-    const q = [];
-    visited[0][0] = true;
-    q.push([0, 0, 1]);
-    while (q.length) {
-      const now = q.shift();
-      const [nowX, nowY, nowStep] = [now[0], now[1], now[2]];
-      if (nowX === N - 1 && nowY === M - 1) {
-        answer = Math.min(answer, nowStep);
-        return;
+  while (q.length) {
+    const [x, y, z] = q.shift();
+    for (let k = 0; k < 4; k++) {
+      const [nx, ny] = [x + dx[k], y + dy[k]];
+      if (nx < 0 || nx >= N || ny < 0 || ny >= M) continue;
+      if (a[nx][ny] === 0 && dist[nx][ny][z] === 0) {
+        dist[nx][ny][z] = dist[x][y][z] + 1;
+        q.push([nx, ny, z]);
       }
-      for (let d = 0; d < 4; d++) {
-        const [nextX, nextY] = [nowX + dx[d], nowY + dy[d]];
-        if (nextX < 0 || nextX >= N || nextY < 0 || nextY >= M) continue;
-        if (visited[nextX][nextY]) continue;
-        if (board[nextX][nextY] === 1) continue;
-        visited[nextX][nextY] = true;
-        q.push([nextX, nextY, nowStep + 1]);
+      if (z === 0 && a[nx][ny] === 1 && dist[nx][ny][z + 1] === 0) {
+        dist[nx][ny][z + 1] = dist[x][y][z] + 1;
+        q.push([nx, ny, z + 1]);
       }
     }
-  };
-
-  for (let [x, y] of brick) {
-    visited = Array.from({ length: N }, () => new Array(M).fill(false));
-    board[x][y] = 0;
-    bfs();
-    board[x][y] = 1;
   }
-
-  if (answer === N * M + 1) return -1;
-  return answer;
+  console.log(dist);
+  if (dist[N - 1][M - 1][0] !== 0 && dist[N - 1][M - 1][1] !== 0) {
+    return Math.min(...dist[N - 1][M - 1]);
+  } else if (dist[N - 1][M - 1][0] !== 0) {
+    return dist[N - 1][M - 1][0];
+  } else if (dist[N - 1][M - 1][1] !== 0) {
+    return dist[N - 1][M - 1][1];
+  } else {
+    return -1;
+  }
 };
 
 const fs = require("fs");

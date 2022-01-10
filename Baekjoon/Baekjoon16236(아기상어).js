@@ -1,85 +1,93 @@
 const solution = (input) => {
   const n = Number(input.shift());
-  const a = input.map((str) => str.split(" ").map(Number));
+  const board = input.map((str) => str.split(" ").map(Number));
+  let size = 2;
+  let ate = 0;
+  let answer = 0;
+  let [x, y] = [0, 0];
   const [dx, dy] = [
     [0, 0, 1, -1],
     [1, -1, 0, 0],
   ];
-  let ans = 0;
-  let size = 2;
-  let exp = 0;
-  let [x, y] = [0, 0];
 
-  const bfs = (a, x, y, size) => {
-    const ans = [];
-    const d = Array.from({ length: n }, () => new Array(n).fill(-1));
+  const bfs = (board, x, y, size) => {
     const q = [];
+    const check = Array.from({ length: n }, () => new Array(n).fill(-1));
+    const eatList = [];
     q.push([x, y]);
-    d[x][y] = 0;
+    check[x][y] = 0;
+
     while (q.length) {
-      [x, y] = q.shift();
+      const [nowX, nowY] = q.shift();
       for (let k = 0; k < 4; k++) {
-        const [nx, ny] = [x + dx[k], y + dy[k]];
-        if (nx < 0 || nx >= n || ny < 0 || ny >= n || d[nx][ny] !== -1)
+        const [nx, ny] = [nowX + dx[k], nowY + dy[k]];
+        if (nx < 0 || nx >= n || ny < 0 || ny >= n || check[nx][ny] !== -1)
           continue;
-        let ok = false;
+        let pass = false;
         let eat = false;
-        if (a[nx][ny] === 0) ok = true;
-        else if (a[nx][ny] < size) {
-          ok = true;
+        if (board[nx][ny] === 0) {
+          pass = true;
+        } else if (size === board[nx][ny]) {
+          pass = true;
+        } else if (size > board[nx][ny]) {
+          pass = true;
           eat = true;
-        } else if (a[nx][ny] === size) {
-          ok = true;
         }
-        if (ok) {
+
+        if (pass) {
+          check[nx][ny] = check[nowX][nowY] + 1;
           q.push([nx, ny]);
-          d[nx][ny] = d[x][y] + 1;
           if (eat) {
-            ans.push([d[nx][ny], nx, ny]);
+            eatList.push([check[nx][ny], nx, ny]);
           }
         }
       }
     }
-    if (ans.length === 0) return -1;
-    ans.sort((a, b) => {
-      if (a[0] !== b[0]) {
-        return a[0] - b[0];
-      } else {
-        if (a[1] !== b[1]) {
-          return a[1] - b[1];
-        } else {
+
+    if (eatList.length === 0) {
+      return -1;
+    }
+
+    eatList.sort((a, b) => {
+      if (a[0] === b[0]) {
+        if (a[1] === b[1]) {
           return a[2] - b[2];
+        } else {
+          return a[1] - b[1];
         }
+      } else {
+        return a[0] - b[0];
       }
     });
-    return ans[0];
+    return eatList[0];
   };
 
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
-      if (a[i][j] === 9) {
+      if (board[i][j] === 9) {
         [x, y] = [i, j];
-        a[i][j] = 0;
+        board[i][j] = 0;
       }
     }
   }
 
   while (1) {
-    const p = bfs(a, x, y, size);
+    const p = bfs(board, x, y, size);
     if (p === -1) {
       break;
     }
     const [dist, nx, ny] = p;
-    a[nx][ny] = 0;
-    ans += dist;
-    exp += 1;
-    if (size === exp) {
+    answer += dist;
+    ate += 1;
+    x = nx;
+    y = ny;
+    board[nx][ny] = 0;
+    if (size === ate) {
       size += 1;
-      exp = 0;
+      ate = 0;
     }
-    [x, y] = [nx, ny];
   }
-  return ans;
+  return answer;
 };
 
 const fs = require("fs");

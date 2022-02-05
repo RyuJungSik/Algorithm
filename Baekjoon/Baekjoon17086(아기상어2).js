@@ -15,32 +15,28 @@ const solution = (input) => {
     board.push(input[i].split(" ").map((num) => +num));
   }
 
-  const bfs = (startList) => {
-    const q = [];
-    for (let [i, j] of startList) {
-      visited[i][j] = 0;
-      q.push([i, j, 0]);
-    }
-    while (q.length > 0) {
-      const [nowX, nowY, nowS] = q.shift();
-      for (let d = 0; d < 8; d++) {
-        const [nx, ny] = [nowX + dx[d], nowY + dy[d]];
-        if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
-        if (board[nx][ny] !== 0) continue;
-        visited[nx][ny] = nowS + 1;
-        q.push([nx, ny, nowS + 1]);
-      }
-    }
-  };
-
+  const q = [];
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
       if (board[i][j] === 1) {
-        startList.push([i, j]);
+        q.push([i, j, 0]);
+        visited[i][j] = 0;
       }
     }
   }
-  bfs(startList);
+
+  while (q.length > 0) {
+    const [nowX, nowY, nowS] = q.shift();
+    for (let d = 0; d < 8; d++) {
+      const [nx, ny] = [nowX + dx[d], nowY + dy[d]];
+      if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
+      if (board[nx][ny] !== 0) continue;
+      if (visited[nx][ny] !== 0) continue;
+      visited[nx][ny] = nowS + 1;
+      q.push([nx, ny, nowS + 1]);
+    }
+  }
+
   let ans = 0;
 
   for (let i = 0; i < n; i++) {

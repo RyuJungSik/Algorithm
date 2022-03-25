@@ -87,8 +87,6 @@ const solution = (input) => {
 };
 
 const fs = require("fs");
-const { format } = require("path");
-const { kill } = require("process");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = fs.readFileSync(filePath).toString().trim().split("\n");
 console.log(solution(input));
